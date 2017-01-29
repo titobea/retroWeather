@@ -10,8 +10,47 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="es.schooleando.retroweather.MainActivity">
 
+    <ListView
+        android:id="@+id/listaCiudades"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/situacion"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:layout_below="@+id/listaCiudades"/>
+
+    <ImageView
+        android:id="@+id/icono"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/situacion"/>
+
+    <TextView
+        android:id="@+id/temperatura"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/icono" />
+
+    <TextView
+        android:id="@+id/viento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/temperatura" />
+
+    <TextView
+        android:id="@+id/humedad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viento"/>
+
+    <Button
+        android:id="@+id/btnActualizar"
+        android:text="ACTUALIZAR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="actualizar"
+        android:layout_below="@+id/humedad"/>
+
 </RelativeLayout>
